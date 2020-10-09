@@ -26,17 +26,17 @@
 
 //=======================================================================
 // core
-#include "core/CoreTimeDomainFeatures.h"
-#include "core/CoreFrequencyDomainFeatures.h"
+#include "CoreTimeDomainFeatures.h"
+#include "CoreFrequencyDomainFeatures.h"
 
 // onset detection functions
-#include "onset-detection-functions/OnsetDetectionFunction.h"
+#include "OnsetDetectionFunction.h"
 
 // pitch detection
-#include "pitch/Yin.h"
+#include "Yin.h"
 
 // MFCC
-#include "mfcc/MFCC.h"
+#include "MFCC.h"
 
 //=======================================================================
 // fft
@@ -52,7 +52,7 @@
 #include "fft/AccelerateFFT.h"
 #endif
 
-#include "fft/WindowFunctions.h"
+#include "WindowFunctions.h"
 
 //=======================================================================
 /** Class for all performing all Gist audio analyses */

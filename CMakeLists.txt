@@ -44,15 +44,17 @@ SET(SOURCE_FILES
     src/onset-detection-functions/OnsetDetectionFunction.cpp
     src/pitch/Yin.cpp
     src/Gist.cpp
+    src/fft/WindowFunctions.cpp
 )
 
 ADD_LIBRARY(${PROJECT_NAME} ${SOURCE_FILES})
 
 TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/*>
     $<INSTALL_INTERFACE:include>
     PRIVATE src)
 
+INCLUDE_DIRECTORIES(include)
 
 TARGET_LINK_LIBRARIES( ${PROJECT_NAME}
     ${CONAN_LIBS}
